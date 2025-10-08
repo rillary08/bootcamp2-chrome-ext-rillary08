@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍅 Focus Timer</h1>
+            <p>Técnica Pomodoro</p>
+        </div>
+        
+        <div class="timer-display">
+            <div id="timeDisplay" class="time">25:00</div>
+            <div id="statusText" class="status">Pronto para começar</div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Iniciar</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>Pausar</button>
+            <button id="resetBtn" class="btn btn-danger">Reset</button>
+        </div>
+        
+        <div class="settings">
+            <div class="setting-item">
+                <label for="workTime">Trabalho (min):</label>
+                <input type="number" id="workTime" min="1" max="60" value="25">
+            </div>
+            <div class="setting-item">
+                <label for="breakTime">Pausa (min):</label>
+                <input type="number" id="breakTime" min="1" max="30" value="5">
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Sessões hoje:</span>
+                <span id="todaySessions" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total:</span>
+                <span id="totalSessions" class="stat-value">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

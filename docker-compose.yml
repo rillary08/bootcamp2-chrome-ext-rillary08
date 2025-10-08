@@ -1,0 +1,20 @@
+services:
+  e2e:
+    build: .
+    image: focus-timer-e2e:latest
+    container_name: focus-timer-tests
+    environment:
+      - CI=true
+      - NODE_ENV=test
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run test:e2e
+    shm_size: 2gb  # Necessário para o Chromium não falhar por falta de memória compartilhada
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge

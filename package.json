@@ -1,0 +1,23 @@
+{
+    "name": "focus-timer-extension",
+    "version": "1.0.0",
+    "description": "Timer Pomodoro para Chrome com testes E2E",
+    "type": "module",
+    "scripts": {
+      "build": "node scripts/build-extension.mjs",
+      "test:e2e": "playwright test --reporter=list,html",
+      "test": "npm run build && npm run test:e2e",
+      "ci": "npm ci && npm run test"
+    },
+    "keywords": ["chrome-extension", "pomodoro", "timer", "productivity"],
+    "author": "rillary08",
+    "license": "MIT",
+    "devDependencies": {
+      "@playwright/test": "^1.46.0",
+      "archiver": "^7.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/rillary08/bootcamp2-chrome-ext-rillary08.git"
+    }
+  }
