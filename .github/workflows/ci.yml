@@ -1,5 +1,9 @@
 name: CI/CD - Focus Timer Extension
 
+permissions:
+  contents: write
+  packages: write
+
 on:
   push:
     branches: [ main ]
